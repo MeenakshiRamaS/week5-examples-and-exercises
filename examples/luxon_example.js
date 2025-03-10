@@ -35,3 +35,33 @@ dt1 == dt2
 ...
 
 */
+
+const today = DateTime.now();
+        console.log(today.toLocaleString(DateTime.DATE_MED))
+
+const birthTime = DateTime.fromObject({
+        year: 2005,
+        month: 8,
+        day:14,
+        hour: 17,
+        minute: 50
+});
+console.log(birthTime.toLocaleString(DateTime.DATETIME_FULL));
+
+const gavinTime = DateTime.fromObject({
+        year: 2004,
+        month: 6,
+        day: 30
+})
+console.log(gavinTime > birthTime);
+
+const newTime = birthTime.plus({
+        year: 1,
+        month: 2,
+        day: 3,
+        hour: 10
+});
+console.log(newTime.toLocaleString(DateTime.DATETIME_FULL));
+
+const timeChange = newTime.setZone("Asia/Manilla")
+console.log(timeChange.toLocaleString(DateTime.DATETIME_FULL))

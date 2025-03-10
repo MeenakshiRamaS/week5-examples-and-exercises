@@ -1,5 +1,6 @@
 import './App.css';
 import Review from './components/Review';
+import Ingredient from './components/Ingredient';
 
 function App() {
   // Review information
@@ -100,6 +101,7 @@ function App() {
           <li>more (ask about our seafood options)</li>
           <br>  
             */}
+              {ingredients.map(i => <Ingredient info={i}/>)}
           </ul>
         </section>
     </> 
